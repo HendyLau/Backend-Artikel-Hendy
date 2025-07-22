@@ -12,6 +12,18 @@
         composer update
         npm install
         npm run dev
+   ----------------------------------------------     
+        insert to .env :
+        GOOGLE_CLIENT_ID=xxxxxxxxx.apps.googleusercontent.com
+        GOOGLE_CLIENT_SECRET=GOCSPX-xxxxxxx
+        GOOGLE_REDIRECT=http://localhost:8000/api/auth/google/callback
+        SESSION_DOMAIN=localhost
+        SANCTUM_STATEFUL_DOMAINS=localhost:5173
+
+        FACEBOOK_CLIENT_ID=xxxxxxxxxxxxx
+        FACEBOOK_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        FACEBOOK_REDIRECT_URI=http://localhost:8000/auth/facebook/callback
+  -------------------------------------------------------------------------------      
         cat /etc/resolv.conf | grep nameserver
         CREATE USER 'root'@'{{IP}}' IDENTIFIED BY '';
         GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.25.240.222' WITH GRANT OPTION;
@@ -37,6 +49,7 @@
 Base URL: http://yourdomain.com/api/v1
 
 - /api/v1/posts	                    ***All posts published
+- /api/v1/video	                    ***All posts published
 - /api/v1/posts?category=name       ***Filter by category
 - /api/v1/posts/slug-title-post	   ***Detail 1 post
 - /api/v1/pages	            ***All pages    
